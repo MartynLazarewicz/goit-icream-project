@@ -88,9 +88,9 @@
     showSlides((slideIndex += n));
   };
 
-  function currentSlide(n) {
+  window.currentSlide = function (n) {
     showSlides((slideIndex = n));
-  }
+  };
 
   function showSlides(n) {
     var i;
