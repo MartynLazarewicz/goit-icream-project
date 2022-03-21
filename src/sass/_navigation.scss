@@ -42,6 +42,7 @@ body {
     &-content {
       padding-top: 60px;
       padding-bottom: 30px;
+      height: 100%;
     }
   }
 
@@ -51,7 +52,6 @@ body {
 /* NAVIGATION MOBILE */
 
 .nav {
-  max-height: 208px;
   margin-top: 20px;
   &__list {
     display: flex;
