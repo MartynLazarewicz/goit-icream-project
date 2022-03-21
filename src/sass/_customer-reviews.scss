@@ -1,0 +1,180 @@
+.customerReviews {
+  padding-top: 123px;
+  padding-bottom: 234px;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .testimonials {
+    height: 85px;
+    width: 85px;
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  .customerWrapper {
+    position: relative;
+    background-color: #fafafa;
+    padding: 50px 50px 20px 50px;
+    text-align: center;
+    width: 100%;
+  }
+  .quotes {
+    position: absolute;
+    top: -15px;
+    left: 2px;
+  }
+  .customerContent {
+    position: relative;
+  }
+  .customerText {
+    position: relative;
+    font-size: 12px;
+    line-height: 31px;
+    font-weight: 500;
+    font-family: 'DM Sans', sans-serif;
+    max-width: 750px;
+    display: inline-block;
+
+    span {
+      position: relative;
+      border-bottom: 1px solid #e1e1e1;
+      padding-bottom: 7px;
+    }
+  }
+
+  .testimonialsDots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding-top: 20px;
+  }
+
+  .customerTitle {
+    font-size: 20px;
+    line-height: 37px;
+    font-weight: 500;
+    font-family: 'DM Sans', sans-serif;
+    padding: 20px 0 15px 0;
+  }
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-top: -22px;
+  color: #d41443;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  user-select: none;
+  background-color: #fafafa;
+  transition: background-color 0.25s ease-in-out;
+
+  &:focus,
+  &:hover {
+    background-color: #717171;
+  }
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 50%;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.dot:hover {
+  background-color: #717171;
+}
+
+.active {
+  background-image: url(../images/dotActive.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: transparent;
+  background-position: center center;
+  border-radius: 0;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mySlides {
+    .customerText {
+      font-size: 14px;
+      line-height: 30px;
+    }
+    .quotes {
+      top: -15px;
+      left: -8px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .mySlides {
+    .customerText {
+      font-size: 16px;
+      line-height: 30px;
+    }
+  }
+}

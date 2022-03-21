@@ -1,11 +1,8 @@
-body {
-  background-color: #ffb8ca;
-}
-
 .header {
   position: fixed;
   width: 100%;
   height: auto;
+  z-index: 1;
   &__content {
     display: flex;
     align-items: center;
@@ -31,7 +28,7 @@ body {
     bottom: 0;
     left: 0;
     background-color: #e17992;
-    z-index: 1;
+
     overflow-y: auto;
     transition: transform 0.25s ease-in-out;
 

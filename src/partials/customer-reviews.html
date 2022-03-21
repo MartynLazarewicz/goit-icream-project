@@ -1,0 +1,114 @@
+<section id="customerReviews" class="customerReviews">
+  <div class="wrapper">
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img class="testimonials" src="./images/testimonials1.png" alt="testimonials1" />
+        <div class="customerWrapper">
+          <div class="customerContent">
+            <div class="customerText">
+              <img class="quotes" src="./images/quotes.svg" alt="testimonials2" />
+              <span
+                >Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In
+                hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel
+                risus.</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="testimonialsDots">
+          <img src="./images/testimonialsDots.svg" alt="dots" />
+          <img src="./images/testimonialsDots.svg" alt="dots" />
+          <img src="./images/testimonialsDots.svg" alt="dots" />
+        </div>
+        <div class="customerTitle">Emily, Los Angeles</div>
+      </div>
+
+      <div class="mySlides fade">
+        <img class="testimonials" src="./images/testimonials2.png" alt="testimonials2" />
+        <div class="customerWrapper">
+          <div class="customerContent">
+            <div class="customerText">
+              <img class="quotes" src="./images/quotes.svg" alt="testimonials2" />
+              <span
+                >Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In
+                hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel
+                risus.</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="testimonialsDots">
+          <img src="./images/testimonialsDots.svg" alt="dots" />
+          <img src="./images/testimonialsDots.svg" alt="dots" />
+          <img src="./images/testimonialsDots.svg" alt="dots" />
+        </div>
+        <div class="customerTitle">Emily, Los Angeles</div>
+      </div>
+
+      <div class="mySlides fade">
+        <img class="testimonials" src="./images/testimonials3.png" alt="testimonials3" />
+        <div class="customerWrapper">
+          <div class="customerContent">
+            <div class="customerText">
+              <img class="quotes" src="./images/quotes.svg" alt="testimonials2" />
+              <span
+                >Nullam viverra consectetuer. Quisque cursus et, porttitor risus. Aliquam sem. In
+                hendrerit nulla quam nunc, accumsan congue. Lorem ipsum primis in nibh vel
+                risus.</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="testimonialsDots">
+          <img src="./images/testimonialsDots.svg" alt="dots" />
+          <img src="./images/testimonialsDots.svg" alt="dots" />
+          <img src="./images/testimonialsDots.svg" alt="dots" />
+        </div>
+        <div class="customerTitle">Emily, Los Angeles</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+    <br />
+
+    <div style="text-align: center">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+  </div>
+</section>
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+  function plusSlides(n) {
+    showSlides((slideIndex += n));
+  }
+
+  function currentSlide(n) {
+    showSlides((slideIndex = n));
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName('mySlides');
+    var dots = document.getElementsByClassName('dot');
+    if (n > slides.length) {
+      slideIndex = 1;
+    }
+    if (n < 1) {
+      slideIndex = slides.length;
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = 'none';
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(' active', '');
+    }
+    slides[slideIndex - 1].style.display = 'flex';
+    dots[slideIndex - 1].className += ' active';
+  }
+</script>
