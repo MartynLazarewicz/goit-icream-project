@@ -1,0 +1,176 @@
+body {
+  background-color: #ffb8ca;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  height: auto;
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    top: 10px;
+  }
+
+  &__logo {
+    &-img {
+      display: block;
+      height: 50px;
+      width: 199px;
+    }
+  }
+
+  /* HAMBURGER MENU */
+
+  &__mobileMenu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #e17992;
+    z-index: 1;
+    overflow-y: auto;
+    transition: transform 0.25s ease-in-out;
+
+    &--hidden {
+      transform: translateY(-100%);
+    }
+
+    &-content {
+      padding-top: 60px;
+      padding-bottom: 30px;
+    }
+  }
+
+  /* HAMBURGER MENU */
+}
+
+/* NAVIGATION MOBILE */
+
+.nav {
+  margin-top: 20px;
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    align-items: center;
+    justify-content: left;
+    padding-block: 11px;
+    border-bottom: 1px solid #e18298;
+    padding-inline: 21px;
+
+    &:first-of-type {
+      border-top: 1px solid #e18298;
+    }
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    font-family: 'DM Sans', sans-serif;
+    color: #fff;
+    &--active {
+      color: #d41443;
+    }
+  }
+}
+
+/* NAVIGATION MOBILE */
+
+/* BTN BUY NOW MOBILE */
+
+.btn-buyMobile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  margin-inline: auto;
+  color: #d41443;
+  background-color: #fff;
+  border: none;
+  border-radius: 25px;
+  white-space: nowrap;
+  padding: 13px 55px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  font-family: 'DM Sans', sans-serif;
+
+  &:focus,
+  &:hover {
+    background: #ecebeb;
+  }
+}
+
+/* BTN BUY NOW MOBILE */
+
+/* HAMBURGER */
+
+.hamburger-lines {
+  width: 30px;
+  height: 20px;
+  position: relative;
+  display: inline-block;
+  margin: 0px;
+  transform: rotate(0deg);
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+
+  .line {
+    display: block;
+    position: absolute;
+    background-color: #d41443;
+    height: 3px;
+    width: 100%;
+    border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    transform: rotate(0deg);
+    transition: 0.25s ease-in-out;
+  }
+
+  .line1 {
+    top: 0;
+  }
+  .line2 {
+    top: 10px;
+  }
+  .line3 {
+    top: 10px;
+  }
+  .line4 {
+    top: 20px;
+  }
+}
+
+.hamburgerOpen {
+  .hamburger-lines {
+    z-index: 2;
+    .line1 {
+      top: 11px;
+      width: 0%;
+      left: 50%;
+    }
+    .line2 {
+      transform: rotate(45deg);
+    }
+    .line3 {
+      transform: rotate(-45deg);
+    }
+    .line4 {
+      top: 11px;
+      width: 0%;
+      left: 50%;
+    }
+  }
+}
+
+/* HAMBURGER */
