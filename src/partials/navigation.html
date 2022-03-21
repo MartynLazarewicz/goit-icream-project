@@ -4,12 +4,40 @@
       <a class="header__logo" href="index.html">
         <img class="header__logo-img" src="./images/logo.png" alt="icecream-logo" />
       </a>
-      <a id="hamburger" href="javascript:void(0)" class="hamburger-lines">
-        <span class="line line1"></span>
-        <span class="line line2"></span>
-        <span class="line line3"></span>
-        <span class="line line4"></span>
-      </a>
+
+      <div class="header__desktopMenu">
+        <nav class="navDesktop">
+          <ul class="navDesktop__list">
+            <li class="navDesktop__item">
+              <a class="navDesktop__link navDesktop__link--active" href="index.html">Home</a>
+            </li>
+            <li class="navDesktop__item">
+              <a class="navDesktop__link" href="#about">About us</a>
+            </li>
+            <li class="navDesktop__item">
+              <a class="navDesktop__link" href="#how">How it’s made?</a>
+            </li>
+            <li class="navDesktop__item">
+              <a class="navDesktop__link" href="#products">Our products</a>
+            </li>
+            <li class="navDesktop__item">
+              <a class="navDesktop__link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="header__tabletMenu">
+        <a id="hamburger" href="javascript:void(0)" class="hamburger-lines">
+          <span class="line line1"></span>
+          <span class="line line2"></span>
+          <span class="line line3"></span>
+          <span class="line line4"></span>
+        </a>
+        <button class="btn-buyDesktop">
+          Buy now
+          <img src="./images/arrowRight.svg" alt="arrowRight" />
+        </button>
+      </div>
     </div>
   </div>
   <div class="header__mobileMenu header__mobileMenu--hidden">
@@ -18,22 +46,22 @@
         Buy now
         <img src="./images/arrowRight.svg" alt="arrowRight" />
       </button>
-      <nav class="nav">
-        <ul class="nav__list">
-          <li class="nav__item">
-            <a class="nav__link nav__link--active" href="index.html">Home</a>
+      <nav class="navMobile">
+        <ul class="navMobile__list">
+          <li class="navMobile__item">
+            <a class="navMobile__link navMobile__link--active" href="index.html">Home</a>
           </li>
-          <li class="nav__item">
-            <a id="navAbout" class="nav__link" href="#about">About us</a>
+          <li class="navMobile__item">
+            <a id="navAbout" class="navMobile__link" href="#about">About us</a>
           </li>
-          <li class="nav__item">
-            <a id="navHow" class="nav__link" href="#how">How it’s made?</a>
+          <li class="navMobile__item">
+            <a id="navHow" class="navMobile__link" href="#how">How it’s made?</a>
           </li>
-          <li class="nav__item">
-            <a id="navProducts" class="nav__link" href="#products">Our products</a>
+          <li class="navMobile__item">
+            <a id="navProducts" class="navMobile__link" href="#products">Our products</a>
           </li>
-          <li class="nav__item">
-            <a id="navContact" class="nav__link" href="#contact">Contact</a>
+          <li class="navMobile__item">
+            <a id="navContact" class="navMobile__link" href="#contact">Contact</a>
           </li>
         </ul>
       </nav>
