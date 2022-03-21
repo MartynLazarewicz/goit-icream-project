@@ -46,11 +46,30 @@ body {
   }
 
   /* HAMBURGER MENU */
+
+  /* DESKTOP MENU */
+
+  &__desktopMenu {
+    display: none;
+  }
+
+  /* DESKTOP MENU */
+
+  /* TABLET MENU */
+
+  &__tabletMenu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  /* TABLET MENU */
 }
 
 /* NAVIGATION MOBILE */
 
-.nav {
+.navMobile {
   margin-top: 20px;
   padding-bottom: 30px;
   &__list {
@@ -84,6 +103,41 @@ body {
 
 /* NAVIGATION MOBILE */
 
+/* NAVIGATION desktop */
+
+.navDesktop {
+  &__list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+  }
+
+  &__item {
+    white-space: nowrap;
+  }
+
+  &__link {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    font-family: 'DM Sans', sans-serif;
+    color: #fff;
+    transition: color 0.25s ease-in-out;
+    &--active {
+      color: #d41443;
+    }
+
+    &:focus,
+    &:hover {
+      color: #d41443;
+    }
+  }
+}
+
+/* NAVIGATION desktop */
+
 /* BTN BUY NOW MOBILE */
 
 .btn-buyMobile {
@@ -102,6 +156,34 @@ body {
   font-weight: 700;
   line-height: 21px;
   font-family: 'DM Sans', sans-serif;
+  transition: background 0.25s ease-in-out;
+
+  &:focus,
+  &:hover {
+    background: #ecebeb;
+  }
+}
+
+/* BTN BUY NOW MOBILE */
+
+/* BTN BUY NOW MOBILE */
+
+.btn-buyDesktop {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+  color: #d41443;
+  background-color: #fff;
+  border: none;
+  border-radius: 25px;
+  white-space: nowrap;
+  padding: 13px 55px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 21px;
+  font-family: 'DM Sans', sans-serif;
+  transition: background 0.25s ease-in-out;
 
   &:focus,
   &:hover {
@@ -152,6 +234,8 @@ body {
 
 .hamburgerOpen {
   .hamburger-lines {
+    position: absolute;
+    right: 32px;
     z-index: 2;
     .line1 {
       top: 11px;
@@ -173,3 +257,20 @@ body {
 }
 
 /* HAMBURGER */
+
+@media screen and (min-width: 550px) {
+  .btn-buyDesktop {
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 980px) {
+  .hamburger-lines {
+    display: none;
+  }
+  .header {
+    &__desktopMenu {
+      display: flex;
+    }
+  }
+}
