@@ -1,5 +1,5 @@
 .header {
-  position: fixed;
+  position: absolute;
   width: 100%;
   height: auto;
   z-index: 1;
@@ -92,7 +92,12 @@
     line-height: 18px;
     font-family: 'DM Sans', sans-serif;
     color: #fff;
+    transition: color 0.25s ease-in-out;
     &--active {
+      color: #d41443;
+    }
+    &:hover,
+    &:focus {
       color: #d41443;
     }
   }
@@ -116,9 +121,9 @@
   }
 
   &__link {
-    font-size: 14px;
+    font-size: 16px;
     font-weight: 700;
-    line-height: 18px;
+    line-height: 21px;
     font-family: 'DM Sans', sans-serif;
     color: #fff;
     transition: color 0.25s ease-in-out;
@@ -154,6 +159,7 @@
   line-height: 21px;
   font-family: 'DM Sans', sans-serif;
   transition: background 0.25s ease-in-out;
+  cursor: pointer;
 
   &:focus,
   &:hover {
@@ -169,18 +175,19 @@
   display: none;
   align-items: center;
   justify-content: center;
-  gap: 28px;
+  gap: 12px;
   color: #d41443;
   background-color: #fff;
   border: none;
   border-radius: 25px;
   white-space: nowrap;
-  padding: 13px 55px;
+  padding: 11px 37px;
   font-size: 16px;
   font-weight: 700;
   line-height: 21px;
   font-family: 'DM Sans', sans-serif;
   transition: background 0.25s ease-in-out;
+  cursor: pointer;
 
   &:focus,
   &:hover {
@@ -193,8 +200,8 @@
 /* HAMBURGER */
 
 .hamburger-lines {
-  width: 30px;
-  height: 20px;
+  width: 20px;
+  height: 12px;
   position: relative;
   display: inline-block;
   margin: 0px;
@@ -206,7 +213,7 @@
     display: block;
     position: absolute;
     background-color: #d41443;
-    height: 3px;
+    height: 1px;
     width: 100%;
     border-radius: 9px;
     opacity: 1;
@@ -219,13 +226,13 @@
     top: 0;
   }
   .line2 {
-    top: 10px;
+    top: 5px;
   }
   .line3 {
-    top: 10px;
+    top: 5px;
   }
   .line4 {
-    top: 20px;
+    top: 10px;
   }
 }
 
@@ -234,6 +241,14 @@
     position: absolute;
     right: 0;
     z-index: 2;
+
+    &:hover .line {
+      background-color: #d41443;
+    }
+
+    .line {
+      background-color: #fff;
+    }
     .line1 {
       top: 11px;
       width: 0%;
