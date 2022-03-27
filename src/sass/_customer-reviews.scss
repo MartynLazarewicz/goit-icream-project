@@ -1,6 +1,6 @@
 .customerReviews {
-  padding-top: 123px;
-  padding-bottom: 234px;
+  padding-top: 80px;
+  padding-bottom: 170px;
 }
 
 /* Slideshow container */
@@ -45,11 +45,20 @@
     font-family: 'DM Sans', sans-serif;
     max-width: 750px;
     display: inline-block;
+    padding-inline: 28px;
 
     span {
       position: relative;
-      border-bottom: 1px solid #e1e1e1;
-      padding-bottom: 7px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      background: repeating-linear-gradient(to bottom, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, #e1e1e1 31px);
+      height: 100%;
+      width: 100%;
+      left: 0;
+      top: 0;
     }
   }
 
@@ -158,10 +167,18 @@
 }
 
 @media screen and (min-width: 768px) {
+  .customerReviews {
+    padding-top: 121px;
+    padding-bottom: 197px;
+  }
   .mySlides {
     .customerText {
       font-size: 14px;
       line-height: 30px;
+
+      &::after {
+        background: repeating-linear-gradient(to bottom, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, transparent, #e1e1e1 30px);
+      }
     }
     .quotes {
       top: -15px;
@@ -171,6 +188,10 @@
 }
 
 @media screen and (min-width: 1200px) {
+  .customerReviews {
+    padding-top: 123px;
+    padding-bottom: 234px;
+  }
   .mySlides {
     .customerText {
       font-size: 16px;
